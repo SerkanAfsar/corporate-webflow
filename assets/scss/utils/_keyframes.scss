@@ -1,0 +1,12 @@
+@keyframes header-effect {
+  from {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-100%);
+  }
+  to {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0%);
+  }
+}

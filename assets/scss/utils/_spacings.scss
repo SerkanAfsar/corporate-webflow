@@ -1,0 +1,39 @@
+@use "../abstract/mixins" as *;
+@use "../abstract/variables" as *;
+@use "sass:map";
+@use "sass:math";
+
+$space-arr: (
+  pt: "padding-top",
+  pb: "padding-bottom",
+  pl: "padding-left",
+  pr: "padding-right",
+  mt: "margin-top",
+  mb: "margin-bottom",
+  ml: "margin-left",
+  mr: "margin-right",
+);
+
+@each $key, $value in $grid-breakpoints {
+  @include respond-up($key) {
+    // $percent: math.div($value, 1400px);
+    // @if ($value==0) {
+    //   $percent: 0.3;
+    // }
+    @each $pKey, $pVal in $space-arr {
+      @for $i from 1 through 30 {
+        $inc: $i * 10;
+        $result: $inc * 1px;
+        .#{$pKey}-#{$key}-#{$inc} {
+          #{$pVal}: $result;
+        }
+      }
+    }
+  }
+}
+
+.container-sm {
+  max-width: 950px;
+  width: 90%;
+  margin: auto;
+}

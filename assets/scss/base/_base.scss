@@ -1,0 +1,90 @@
+@use "../abstract/variables" as *;
+@use "../abstract/mixins" as *;
+
+// $container-max-widths: (
+//   sm: 540px,
+//   md: 720px,
+//   lg: 960px,
+//   xl: 1140px,
+//   xxl: 1320px,
+// );
+
+:root {
+  @include respond-up(sm) {
+  }
+
+  @include respond-up(md) {
+  }
+  @include respond-up(lg) {
+  }
+  @include respond-up(xl) {
+    --3xl-font-size: 56px;
+    --2xl-font-size: 48px;
+    --xl-font-size: 40px;
+    --lg-font-size: 24px;
+    --md-font-size: 20px;
+    --sm-font-size: 18px;
+    --xs-font-size: 16px;
+    --2xs-sm-font: 14px;
+
+    --p-font-size: 18px;
+
+    --2xl-leading: 67.2px;
+    --xl-leading: 57.6px;
+    --lg-leading: 28px;
+    --md-leading: 24px;
+
+    --p-leading: 27px;
+
+    --spacing-110: 110px;
+    --spacing-80: 80px;
+    --spacing-64: 64px;
+    --spacing-50: 50px;
+    --spacing-32: 32px;
+    --spacing-24: 24px;
+    --spacing-15: 15px;
+  }
+  @include respond-up(xxl) {
+  }
+}
+
+*,
+*::before,
+*:after {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+}
+
+ul,
+li {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+main,
+section,
+footer {
+  width: 100%;
+  display: block;
+}
+
+html,
+body {
+  margin: 0px;
+  padding: 0px;
+}
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+}

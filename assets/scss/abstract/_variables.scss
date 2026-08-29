@@ -1,0 +1,25 @@
+$font-roboto: "Roboto", sans-serif;
+
+$theme-colors: (
+  color-dark: #000,
+  color-white: #fff,
+  color-bg-gray: #faf7f2,
+);
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+  3xl: 2560px,
+);
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1320px,
+);

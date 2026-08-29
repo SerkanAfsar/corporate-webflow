@@ -1,0 +1,6 @@
+@use "../abstract/variables" as *;
+@use "sass:map";
+
+@function get-colors($color: "color-primary") {
+  @return map.get($theme-colors, $color);
+}
