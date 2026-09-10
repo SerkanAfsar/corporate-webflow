@@ -9,5 +9,5 @@ Serkan Afşar - Frontend Developer [https://github.com/SerkanAfsar](https://gith
 ### Links
 
 - **Figma:** [View Design](https://www.figma.com/design/1CK42eyLSFrdvLIe53Yjju/Ddsgnr---Corporate-Webflow-Website-Template--Community-?node-id=1-52&m=dev)
-- **Live Demo:** [View Website](https://serkanafsar.github.io/Corporate-Webflow/)
+- **Live Demo:** [View Website](https://serkanafsar.github.io/corporate-webflow/)
 - **Developer:** [Serkan Afşar - Frontend Developer](https://github.com/SerkanAfsar)
