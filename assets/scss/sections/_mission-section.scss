@@ -1,0 +1,52 @@
+@use "../abstract/mixins" as *;
+.mission {
+  display: block;
+  width: 100%;
+  padding: var(--spacing-110) 0px;
+  &-info {
+    @include flexBox(column, center, center);
+    height: 100%;
+    text-align: center;
+    @include respond-up(md) {
+      align-items: flex-start;
+      text-align: left;
+    }
+    h2 {
+      margin-top: var(--spacing-15);
+    }
+    p {
+      margin-top: var(--spacing-24);
+      @include respond-up(xxl) {
+        max-width: 616px;
+      }
+    }
+    .button-linked {
+      margin-top: var(--spacing-32);
+      span {
+        font-size: 16px;
+        margin-top: -2px;
+      }
+    }
+  }
+  &-img {
+    display: block;
+    position: relative;
+    @include respond-down(md) {
+      margin-top: 30px;
+    }
+    @include respond-up(lg) {
+      float: right;
+      width: 90%;
+    }
+  }
+  .vector {
+    width: 128px;
+    height: 103px;
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    background: url("../images/Vector.png") no-repeat center;
+    transform: translate(-50%, -50%);
+  }
+}

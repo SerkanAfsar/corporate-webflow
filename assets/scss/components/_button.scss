@@ -1,0 +1,21 @@
+@use "../abstract/functions" as *;
+@use "../abstract/mixins" as *;
+.button {
+  background: get-colors(color-dark);
+  color: #fff;
+  font-size: var(--xs-sm-font);
+  padding: 12px 24px;
+  border-radius: 5px;
+  border: 1px solid get-colors(color-dark);
+  &-outlined {
+    background: #fff;
+    color: get-colors(color-dark);
+  }
+  &-linked {
+    background: #fff;
+    color: #000;
+    @include flexBox;
+    gap: 10px;
+    border: none;
+  }
+}

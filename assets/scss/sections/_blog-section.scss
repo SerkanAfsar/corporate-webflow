@@ -1,0 +1,44 @@
+@use "../abstract/mixins" as *;
+.blog {
+  display: block;
+  width: 100%;
+  @include flexBox(column, center, center);
+  padding: var(--spacing-110) 0px;
+  &-info {
+    text-align: center;
+    h5 {
+      font-size: var(--xs-font-size);
+
+      font-weight: 600;
+      line-height: var(--md-leading);
+    }
+    h2 {
+      margin-top: var(--spacing-15);
+    }
+    p {
+      margin-top: var(--spacing-24);
+    }
+  }
+  &-item {
+    @include respond-down(md) {
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    img {
+      width: 100%;
+      height: auto;
+    }
+    h5 {
+      line-height: var(--md-leading);
+    }
+    h3 {
+      margin-top: 5px;
+    }
+    p {
+      margin-top: 5px;
+    }
+  }
+  &-wrapper {
+    margin-top: var(--spacing-80);
+  }
+}

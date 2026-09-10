@@ -1,0 +1,50 @@
+@use "../abstract/mixins" as *;
+.testimonials {
+  display: block;
+  width: 100%;
+  padding: var(--spacing-110) 0px;
+  &-info {
+    p {
+      margin-top: var(--spacing-15);
+    }
+  }
+
+  &-wrapper {
+    margin-top: var(--spacing-80);
+  }
+  &-slider {
+    width: 100%;
+    display: block;
+  }
+
+  &-item {
+    @include flexBox(column, center, center);
+    text-align: center;
+    display: inline-flex !important;
+    @include respond-up(md) {
+      justify-content: flex-start;
+      align-items: flex-start;
+      text-align: left;
+    }
+
+    &__stars {
+      @include flexBox;
+      gap: 2px;
+    }
+    p {
+      color: #676767;
+      line-height: 160%;
+      margin-top: var(--spacing-32);
+      padding-right: 20px;
+
+      @include respond-up(lg) {
+        padding-right: 50px;
+      }
+    }
+    &__person {
+      @include flexBox;
+      margin-top: var(--spacing-32);
+      gap: 10px;
+    }
+  }
+}

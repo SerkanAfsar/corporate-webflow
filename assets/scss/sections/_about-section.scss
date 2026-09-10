@@ -1,0 +1,30 @@
+@use "../abstract/mixins" as *;
+.about {
+  display: block;
+  width: 100%;
+  padding: var(--spacing-110) 0px;
+  &-info {
+    height: 100%;
+    @include flexBox(column, center, center);
+    text-align: center;
+    @include respond-up(md) {
+      align-items: flex-start;
+      text-align: left;
+    }
+    h2 {
+      max-width: 616px;
+      @include respond-down(sm) {
+        margin-top: var(--spacing-24);
+      }
+    }
+    p {
+      margin-top: var(--spacing-24);
+    }
+  }
+  &-buttons {
+    margin-top: var(--spacing-32);
+    @include flexBox;
+    display: inline-flex;
+    gap: 10px;
+  }
+}

@@ -1,21 +1,35 @@
 @use "../abstract/variables" as *;
 @use "../abstract/mixins" as *;
 
-// $container-max-widths: (
-//   sm: 540px,
-//   md: 720px,
-//   lg: 960px,
-//   xl: 1140px,
-//   xxl: 1320px,
-// );
-
 :root {
+  --spacing-110: 40px;
+  --spacing-80: 20px;
+  --spacing-64: 64px;
+  --spacing-50: 25px;
+  --spacing-32: 16px;
+  --spacing-24: 12px;
+  --spacing-15: 15px;
+
+  --3xl-font-size: 30px;
+  --2xl-font-size: 28px;
+  --p-leading: 27px;
+
+  --2xl-leading: 40px;
+  --xl-leading: 35px;
+
+  --xs-font-size: 16px;
+
   @include respond-up(sm) {
+    --container-width: 540px;
   }
 
   @include respond-up(md) {
+    --container-width: 720px;
+    --3xl-font-size: 35px;
+    --2xl-leading: 50px;
   }
   @include respond-up(lg) {
+    --container-width: 960px;
   }
   @include respond-up(xl) {
     --3xl-font-size: 56px;
@@ -43,8 +57,11 @@
     --spacing-32: 32px;
     --spacing-24: 24px;
     --spacing-15: 15px;
+
+    --container-width: 1140px;
   }
   @include respond-up(xxl) {
+    --container-width: 1320px;
   }
 }
 
@@ -58,6 +75,12 @@
   outline: none;
 }
 
+button {
+  cursor: pointer;
+  outline: none;
+  border: none;
+  background: inherit;
+}
 ul,
 li {
   margin: 0px;
@@ -87,4 +110,5 @@ body {
 body {
   min-height: 100vh;
   overflow-x: hidden;
+  font-family: "Roboto", sans-serif;
 }

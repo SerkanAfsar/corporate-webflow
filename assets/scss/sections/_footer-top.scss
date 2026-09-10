@@ -1,0 +1,13 @@
+@use "../abstract/mixins" as *;
+.footer-top {
+  nav {
+    margin-top: var(--spacing-32);
+    ul {
+      @include flexBox(column, center, center);
+      @include respond-up(md) {
+        flex-direction: row;
+      }
+      gap: 10px;
+    }
+  }
+}

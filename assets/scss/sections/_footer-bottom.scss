@@ -1,0 +1,25 @@
+@use "../abstract/mixins" as *;
+.footer-bottom {
+  width: 100%;
+  border-top: 1px solid #000;
+  padding-top: var(--spacing-32);
+  margin-top: var(--spacing-24);
+  font-size: 14px;
+
+  @include flexBox(column, center, center);
+  @include respond-up(md) {
+    @include flexBox(row, space-between, center);
+  }
+  @include respond-up(lg) {
+    margin-top: var(--spacing-64);
+  }
+  ul {
+    @include flexBox;
+    @include respond-down(md) {
+      margin-bottom: var(--spacing-32);
+      flex-wrap: wrap;
+      order: -1;
+    }
+    gap: 12px;
+  }
+}

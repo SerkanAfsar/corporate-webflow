@@ -1,6 +1,23 @@
 @use "base/reset";
 @use "base/base";
 
+@use "layout/header";
+@use "layout/footer";
+@use "components/button";
+
+@use "sections/hero-section";
+@use "sections/referances-section";
+@use "sections/about-section";
+@use "sections/counter-section";
+@use "sections/mission-section";
+@use "sections/services-section";
+@use "sections/blog-section";
+@use "sections/testimonials-section";
+@use "sections/contact-section";
+@use "sections/footer-top";
+@use "sections/footer-bottom";
+
 @use "utils/keyframes";
+@use "utils/typography";
 // @use "utils/spacings";
 // @use "utils/typography";

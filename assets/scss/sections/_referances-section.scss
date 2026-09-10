@@ -1,0 +1,22 @@
+@use "../abstract/mixins" as *;
+@use "../abstract/functions" as *;
+
+.referances {
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: var(--spacing-80) 0px;
+  background: get-colors(color-bg-gray);
+  h5 {
+    margin-bottom: var(--spacing-50);
+  }
+  .refSlider {
+    .slick-slide,
+    .item {
+      @include flexBox;
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
