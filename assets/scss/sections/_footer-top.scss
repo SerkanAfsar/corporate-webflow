@@ -3,10 +3,8 @@
   nav {
     margin-top: var(--spacing-32);
     ul {
-      @include flexBox(column, center, center);
-      @include respond-up(md) {
-        flex-direction: row;
-      }
+      @include flexBox(row, center, center);
+      flex-wrap: wrap;
       gap: 10px;
     }
   }

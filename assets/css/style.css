@@ -810,14 +810,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-}
-@media all and (min-width: 768px) {
-  .footer-top nav ul {
-    flex-direction: row;
-  }
-}
-.footer-top nav ul {
+  flex-direction: row;
+  flex-wrap: wrap;
   gap: 10px;
 }
 
