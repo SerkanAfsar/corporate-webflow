@@ -147,6 +147,7 @@ table {
   --2xl-leading: 40px;
   --xl-leading: 35px;
   --xs-font-size: 16px;
+  --header-height: 65px;
 }
 @media all and (min-width: 576px) {
   :root {
@@ -251,14 +252,17 @@ body {
 }
 
 .header {
-  display: block;
   width: 100%;
-  padding: 16px 0px;
+  height: var(--header-height);
   background: #fff;
   z-index: 10;
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
 }
-.header.sticky {
+.header.sticky-header {
   position: sticky;
   inset: 0px;
   animation: header-effect 0.4s ease-in-out;
@@ -402,23 +406,6 @@ body {
   width: 100%;
   display: block;
 }
-.hero-img {
-  margin-top: 20px;
-}
-@media all and (min-width: 768px) {
-  .hero-img {
-    margin-right: calc((100vw - 100%) / -2);
-    width: calc(50vw - 12px);
-    height: 100vh;
-    margin-top: 0px;
-  }
-  .hero-img img {
-    width: 100%;
-    object-fit: cover;
-    object-position: top center;
-    height: 100%;
-  }
-}
 .hero-info {
   display: flex;
   justify-content: center;
@@ -444,6 +431,29 @@ body {
 }
 .hero-info p {
   margin-top: var(--spacing-24);
+}
+.hero-img {
+  margin-top: 20px;
+}
+@media all and (min-width: 768px) {
+  .hero-img {
+    margin-right: calc((100vw - 100%) / -2);
+    width: calc(50vw - 12px);
+    height: 100%;
+    margin-top: 0px;
+    height: calc(100vh - var(--header-height));
+  }
+  .hero-img img {
+    width: 100%;
+    object-fit: cover;
+    object-position: top center;
+    height: 100%;
+  }
+}
+@media all and (min-width: 1400px) {
+  .hero-img {
+    height: 100vh;
+  }
 }
 .hero-buttons {
   margin-top: var(--spacing-24);

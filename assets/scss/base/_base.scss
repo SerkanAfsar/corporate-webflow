@@ -19,6 +19,8 @@
 
   --xs-font-size: 16px;
 
+  --header-height: 65px;
+
   @include respond-up(sm) {
     --container-width: 540px;
   }

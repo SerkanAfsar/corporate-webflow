@@ -1,14 +1,14 @@
 @use "../abstract/mixins" as *;
 @use "../abstract/functions" as *;
 .header {
-  display: block;
   width: 100%;
-  padding: 16px 0px;
+  height: var(--header-height);
   background: #fff;
   z-index: 10;
   position: relative;
+  @include flexBox;
 
-  &.sticky {
+  &.sticky-header {
     position: sticky;
     inset: 0px;
     animation: header-effect 0.4s ease-in-out;

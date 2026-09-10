@@ -9,7 +9,10 @@ Fancybox.bind("[data-fancybox]", {
 AOS.init();
 
 window.addEventListener("scroll", () => {
-  header.classList.toggle("sticky", window.scrollY >= header.clientHeight);
+  header.classList.toggle(
+    "sticky-header",
+    window.scrollY >= header.clientHeight,
+  );
 });
 
 [menuClose, btnToggle].forEach((item) => {
